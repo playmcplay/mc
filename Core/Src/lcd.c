@@ -27,16 +27,15 @@
  */
 
 #include "stdlib.h"
-#include "./BSP/LCD/lcd.h"
-#include "./BSP/LCD/lcdfont.h"
-#include "./SYSTEM/usart/usart.h"
-
+#include "fsmc.h"
+#include "lcd.h"
+#include "lcdfont.h"
 
 /* lcd_ex.c存放各个LCD驱动IC的寄存器初始化部分代码,以简化lcd.c,该.c文件
  * 不直接加入到工程里面,只有lcd.c会用到,所以通过include的形式添加.(不要在
  * 其他文件再包含该.c文件!!否则会报错!)
  */
-#include "./BSP/LCD/lcd_ex.c"
+#include "lcd_ex.c"
 
 
 SRAM_HandleTypeDef g_sram_handle;   /* SRAM句柄(用于控制LCD) */
@@ -598,38 +597,12 @@ void lcd_set_window(uint16_t sx, uint16_t sy, uint16_t width, uint16_t height)
 }
 
 /**
- * @brief       SRAM底层驱动，时钟使能，引脚分配
- * @note        此函数会被HAL_SRAM_Init()调用,初始化读写总线引脚
- * @param       hsram:SRAM句柄
- * @retval      无
- */
-void HAL_SRAM_MspInit(SRAM_HandleTypeDef *hsram)
-{
-    GPIO_InitTypeDef gpio_init_struct;
-
-    __HAL_RCC_FSMC_CLK_ENABLE();            /* 使能FSMC时钟 */
-    __HAL_RCC_GPIOD_CLK_ENABLE();           /* 使能GPIOD时钟 */
-    __HAL_RCC_GPIOE_CLK_ENABLE();           /* 使能GPIOE时钟 */
-
-    /* 初始化PD0,1, 8,9,10,14,15 */
-    gpio_init_struct.Pin = GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_8 \
-                           | GPIO_PIN_9 | GPIO_PIN_10 | GPIO_PIN_14 | GPIO_PIN_15;
-    gpio_init_struct.Mode = GPIO_MODE_AF_PP;            /* 推挽复用 */
-    gpio_init_struct.Pull = GPIO_PULLUP;                /* 上拉 */
-    gpio_init_struct.Speed = GPIO_SPEED_FREQ_HIGH;      /* 高速 */
-    gpio_init_struct.Alternate = GPIO_AF12_FSMC;        /* 复用为FSMC */
-
-    HAL_GPIO_Init(GPIOD, &gpio_init_struct);            /* 初始化 */
-
-    /* 初始化PE7,8,9,10,11,12,13,14,15 */
-    gpio_init_struct.Pin = GPIO_PIN_7 | GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10 \
-                           | GPIO_PIN_11 | GPIO_PIN_12 | GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15;
-    HAL_GPIO_Init(GPIOE, &gpio_init_struct);
-}
-
-/**
  * @brief       初始化LCD
  *   @note      该初始化函数可以初始化各种型号的LCD(详见本.c文件最前面的描述)
+ *
+ *              FSMC底层引脚和时序已由 STM32CubeMX 生成的 fsmc.c(MX_FSMC_Init /
+ *              HAL_SRAM_MspInit)完成, 这里不再重复初始化, 仅做 BL 引脚和
+ *              LCD 控制器的初始化.
  *
  * @param       无
  * @retval      无
@@ -637,65 +610,17 @@ void HAL_SRAM_MspInit(SRAM_HandleTypeDef *hsram)
 void lcd_init(void)
 {
     GPIO_InitTypeDef gpio_init_struct;
-    FSMC_NORSRAM_TimingTypeDef fsmc_read_handle;
-    FSMC_NORSRAM_TimingTypeDef fsmc_write_handle;
 
-    LCD_CS_GPIO_CLK_ENABLE();   /* LCD_CS脚时钟使能 */
-    LCD_WR_GPIO_CLK_ENABLE();   /* LCD_WR脚时钟使能 */
-    LCD_RD_GPIO_CLK_ENABLE();   /* LCD_RD脚时钟使能 */
-    LCD_RS_GPIO_CLK_ENABLE();   /* LCD_RS脚时钟使能 */
-    LCD_BL_GPIO_CLK_ENABLE();   /* LCD_BL脚时钟使能 */
-    
-    gpio_init_struct.Pin = LCD_CS_GPIO_PIN;
-    gpio_init_struct.Mode = GPIO_MODE_AF_PP;                /* 推挽复用 */
-    gpio_init_struct.Pull = GPIO_PULLUP;                    /* 上拉 */
-    gpio_init_struct.Speed = GPIO_SPEED_FREQ_HIGH;          /* 高速 */
-    gpio_init_struct.Alternate = GPIO_AF12_FSMC;            /* 复用为FSMC */
-    HAL_GPIO_Init(LCD_CS_GPIO_PORT, &gpio_init_struct);     /* 初始化LCD_CS引脚 */
-
-    gpio_init_struct.Pin = LCD_WR_GPIO_PIN;
-    HAL_GPIO_Init(LCD_WR_GPIO_PORT, &gpio_init_struct);     /* 初始化LCD_WR引脚 */
-
-    gpio_init_struct.Pin = LCD_RD_GPIO_PIN;
-    HAL_GPIO_Init(LCD_RD_GPIO_PORT, &gpio_init_struct);     /* 初始化LCD_RD引脚 */
-
-    gpio_init_struct.Pin = LCD_RS_GPIO_PIN;
-    HAL_GPIO_Init(LCD_RS_GPIO_PORT, &gpio_init_struct);     /* 初始化LCD_RS引脚 */
+    LCD_BL_GPIO_CLK_ENABLE();   /* LCD_BL脚时钟使能(其他 FSMC 引脚时钟由 fsmc.c 打开) */
 
     gpio_init_struct.Pin = LCD_BL_GPIO_PIN;
     gpio_init_struct.Mode = GPIO_MODE_OUTPUT_PP;            /* 推挽输出 */
+    gpio_init_struct.Pull = GPIO_NOPULL;
+    gpio_init_struct.Speed = GPIO_SPEED_FREQ_HIGH;
     HAL_GPIO_Init(LCD_BL_GPIO_PORT, &gpio_init_struct);     /* LCD_BL引脚模式设置(推挽输出) */
 
-    g_sram_handle.Instance = FSMC_NORSRAM_DEVICE;
-    g_sram_handle.Extended = FSMC_NORSRAM_EXTENDED_DEVICE;
-    
-    g_sram_handle.Init.NSBank = FSMC_NORSRAM_BANK4;                        /* 使用NE4 */
-    g_sram_handle.Init.DataAddressMux = FSMC_DATA_ADDRESS_MUX_DISABLE;     /* 地址/数据线不复用 */
-    g_sram_handle.Init.MemoryDataWidth = FSMC_NORSRAM_MEM_BUS_WIDTH_16;    /* 16位数据宽度 */
-    g_sram_handle.Init.BurstAccessMode = FSMC_BURST_ACCESS_MODE_DISABLE;   /* 是否使能突发访问,仅对同步突发存储器有效,此处未用到 */
-    g_sram_handle.Init.WaitSignalPolarity = FSMC_WAIT_SIGNAL_POLARITY_LOW; /* 等待信号的极性,仅在突发模式访问下有用 */
-    g_sram_handle.Init.WaitSignalActive = FSMC_WAIT_TIMING_BEFORE_WS;      /* 存储器是在等待周期之前的一个时钟周期还是等待周期期间使能NWAIT */
-    g_sram_handle.Init.WriteOperation = FSMC_WRITE_OPERATION_ENABLE;       /* 存储器写使能 */
-    g_sram_handle.Init.WaitSignal = FSMC_WAIT_SIGNAL_DISABLE;              /* 等待使能位,此处未用到 */
-    g_sram_handle.Init.ExtendedMode = FSMC_EXTENDED_MODE_ENABLE;           /* 读写使用不同的时序 */
-    g_sram_handle.Init.AsynchronousWait = FSMC_ASYNCHRONOUS_WAIT_DISABLE;  /* 是否使能同步传输模式下的等待信号,此处未用到 */
-    g_sram_handle.Init.WriteBurst = FSMC_WRITE_BURST_DISABLE;              /* 禁止突发写 */
-    
-    /* FSMC读时序控制寄存器 */
-    fsmc_read_handle.AddressSetupTime = 0x0F;           /* 地址建立时间(ADDSET)为15个fsmc_ker_ck(1/168=6)即6*15=90ns */
-    fsmc_read_handle.AddressHoldTime = 0x00;            /* 地址保持时间(ADDHLD) 模式A是没有用到 */
-    fsmc_read_handle.DataSetupTime = 60;                /* 数据保存时间(DATAST)为60个fsmc_ker_ck=6*60=360ns */
-                                                        /* 因为液晶驱动IC的读数据的时候,速度不能太快,尤其是个别奇葩芯片 */
-    fsmc_read_handle.AccessMode = FSMC_ACCESS_MODE_A;   /* 模式A */
-    
-    /* FSMC写时序控制寄存器 */
-    fsmc_write_handle.AddressSetupTime = 9;             /* 地址建立时间(ADDSET)为9个fsmc_ker_ck=6*9=54ns */
-    fsmc_write_handle.AddressHoldTime = 0x00;           /* 地址保持时间(ADDHLD) 模式A是没有用到 */
-    fsmc_write_handle.DataSetupTime = 9;                /* 数据保存时间(DATAST)为9个fsmc_ker_ck=6*9=54ns */
-                                                        /* 注意：某些液晶驱动IC的写信号脉宽，最少也得50ns */
-    fsmc_write_handle.AccessMode = FSMC_ACCESS_MODE_A;  /* 模式A */
-    
-    HAL_SRAM_Init(&g_sram_handle, &fsmc_read_handle, &fsmc_write_handle);
+    /* 等待 LCD 上电稳定 (CubeMX 的 MX_FSMC_Init 已在 lcd_init 之前完成, 此处仅做
+     * 一个稳妥的延时, 与原正点原子例程保持一致) */
     delay_ms(50);
 
     /* 尝试9341 ID的读取 */
@@ -780,12 +705,14 @@ void lcd_init(void)
             }
         }
     }
-
     /* 特别注意, 如果在main函数里面屏蔽串口1初始化, 则会卡死在printf
      * 里面(卡死在f_putc函数), 所以, 必须初始化串口1, 或者屏蔽掉下面
      * 这行 printf 语句 !!!!!!!
+     *
+     * 本工程未启用串口 printf 重定向, 暂屏蔽 LCD ID 打印;
+     * 后期若开启串口, 把下一行的注释取消即可.
      */
-    printf("LCD ID:%x\r\n", lcddev.id); /* 打印LCD ID */
+    // printf("LCD ID:%x\r\n", lcddev.id); /* 打印LCD ID */
 
     if (lcddev.id == 0x7789)
     {
@@ -819,27 +746,43 @@ void lcd_init(void)
 
     /* 由于不同屏幕的写时序不同，这里的时序可以根据自己的屏幕进行修改
       （若插上长排线对时序也会有影响，需要自己根据情况修改） */
-    /* 初始化完成以后,提速 */
-    if (lcddev.id == 0x7789)
+    /* 初始化完成以后,提速
+     * 注意: 句柄/扩展寄存器指针改用 CubeMX 生成的 hsram4, 不再使用本文件内
+     *       已删除的 g_sram_handle.
+     */
     {
-        /* 重新配置写时序控制寄存器的时序 */
-        fsmc_write_handle.AddressSetupTime = 3; /* 地址建立时间(ADDSET)为3个fsmc_ker_ck=6*3=18ns */
-        fsmc_write_handle.DataSetupTime = 3;    /* 数据保持时间(DATAST)为3个fsmc_ker_ck=6*3=18ns */
-        FSMC_NORSRAM_Extended_Timing_Init(g_sram_handle.Extended, &fsmc_write_handle, g_sram_handle.Init.NSBank, g_sram_handle.Init.ExtendedMode);
-    }
-    else if (lcddev.id == 0x9806 || lcddev.id == 0x9341 || lcddev.id == 0x5510)
-    {
-        /* 重新配置写时序控制寄存器的时序 */
-        fsmc_write_handle.AddressSetupTime = 2; /* 地址建立时间(ADDSET)为2个fsmc_ker_ck=6*2=12ns */
-        fsmc_write_handle.DataSetupTime = 2;    /* 数据保持时间(DATAST)为2个fsmc_ker_ck=6*2=12ns */
-        FSMC_NORSRAM_Extended_Timing_Init(g_sram_handle.Extended, &fsmc_write_handle, g_sram_handle.Init.NSBank, g_sram_handle.Init.ExtendedMode);
-    }
-    else if (lcddev.id == 0x5310 || lcddev.id == 0x7796 || lcddev.id == 0x1963)
-    {
-        /* 重新配置写时序控制寄存器的时序 */
-        fsmc_write_handle.AddressSetupTime = 1; /* 地址建立时间(ADDSET)为1个fsmc_ker_ck=6*1=6ns */
-        fsmc_write_handle.DataSetupTime = 1;    /* 数据保持时间(DATAST)为1个fsmc_ker_ck=6*1=6ns */
-        FSMC_NORSRAM_Extended_Timing_Init(g_sram_handle.Extended, &fsmc_write_handle, g_sram_handle.Init.NSBank, g_sram_handle.Init.ExtendedMode);
+        FSMC_NORSRAM_TimingTypeDef fsmc_write_handle;
+
+        if (lcddev.id == 0x7789)
+        {
+            /* 重新配置写时序控制寄存器的时序 */
+            fsmc_write_handle.AddressSetupTime = 3; /* 地址建立时间(ADDSET)为3个fsmc_ker_ck=6*3=18ns */
+            fsmc_write_handle.AddressHoldTime = 0;
+            fsmc_write_handle.DataSetupTime = 3;    /* 数据保持时间(DATAST)为3个fsmc_ker_ck=6*3=18ns */
+            fsmc_write_handle.BusTurnAroundDuration = 0;
+            fsmc_write_handle.AccessMode = FSMC_ACCESS_MODE_A;
+            FSMC_NORSRAM_Extended_Timing_Init(hsram4.Extended, &fsmc_write_handle, hsram4.Init.NSBank, hsram4.Init.ExtendedMode);
+        }
+        else if (lcddev.id == 0x9806 || lcddev.id == 0x9341 || lcddev.id == 0x5510)
+        {
+            /* 重新配置写时序控制寄存器的时序 */
+            fsmc_write_handle.AddressSetupTime = 2; /* 地址建立时间(ADDSET)为2个fsmc_ker_ck=6*2=12ns */
+            fsmc_write_handle.AddressHoldTime = 0;
+            fsmc_write_handle.DataSetupTime = 2;    /* 数据保持时间(DATAST)为2个fsmc_ker_ck=6*2=12ns */
+            fsmc_write_handle.BusTurnAroundDuration = 0;
+            fsmc_write_handle.AccessMode = FSMC_ACCESS_MODE_A;
+            FSMC_NORSRAM_Extended_Timing_Init(hsram4.Extended, &fsmc_write_handle, hsram4.Init.NSBank, hsram4.Init.ExtendedMode);
+        }
+        else if (lcddev.id == 0x5310 || lcddev.id == 0x7796 || lcddev.id == 0x1963)
+        {
+            /* 重新配置写时序控制寄存器的时序 */
+            fsmc_write_handle.AddressSetupTime = 1; /* 地址建立时间(ADDSET)为1个fsmc_ker_ck=6*1=6ns */
+            fsmc_write_handle.AddressHoldTime = 0;
+            fsmc_write_handle.DataSetupTime = 1;    /* 数据保持时间(DATAST)为1个fsmc_ker_ck=6*1=6ns */
+            fsmc_write_handle.BusTurnAroundDuration = 0;
+            fsmc_write_handle.AccessMode = FSMC_ACCESS_MODE_A;
+            FSMC_NORSRAM_Extended_Timing_Init(hsram4.Extended, &fsmc_write_handle, hsram4.Init.NSBank, hsram4.Init.ExtendedMode);
+        }
     }
 
     lcd_display_dir(0); /* 默认为竖屏 */

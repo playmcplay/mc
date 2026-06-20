@@ -4,16 +4,17 @@ set(CMAKE_SYSTEM_PROCESSOR          arm)
 set(CMAKE_C_COMPILER_ID GNU)
 set(CMAKE_CXX_COMPILER_ID GNU)
 
-# Some default GCC settings
-# arm-none-eabi- must be part of path environment
-set(TOOLCHAIN_PREFIX                arm-none-eabi-)
+# ====== 彻底写死的 ARM 工具链绝对路径 ======
+set(TOOLCHAIN_PATH "C:/Program Files (x86)/Arm/GNU Toolchain mingw-w64-i686-arm-none-eabi/bin/")
 
-set(CMAKE_C_COMPILER "C:/Program Files (x86)/Arm/GNU Toolchain mingw-w64-i686-arm-none-eabi/bin/arm-none-eabi-gcc.exe")
-set(CMAKE_CXX_COMPILER "C:/Program Files (x86)/Arm/GNU Toolchain mingw-w64-i686-arm-none-eabi/bin/arm-none-eabi-g++.exe")
-set(CMAKE_ASM_COMPILER "C:/Program Files (x86)/Arm/GNU Toolchain mingw-w64-i686-arm-none-eabi/bin/arm-none-eabi-gcc.exe")
-set(CMAKE_LINKER                    ${TOOLCHAIN_PREFIX}g++)
-set(CMAKE_OBJCOPY                   ${TOOLCHAIN_PREFIX}objcopy)
-set(CMAKE_SIZE                      ${TOOLCHAIN_PREFIX}size)
+set(CMAKE_C_COMPILER "${TOOLCHAIN_PATH}arm-none-eabi-gcc.exe")
+set(CMAKE_CXX_COMPILER "${TOOLCHAIN_PATH}arm-none-eabi-g++.exe")
+set(CMAKE_ASM_COMPILER "${TOOLCHAIN_PATH}arm-none-eabi-gcc.exe")
+
+set(CMAKE_LINKER       "${TOOLCHAIN_PATH}arm-none-eabi-g++.exe")
+set(CMAKE_OBJCOPY      "${TOOLCHAIN_PATH}arm-none-eabi-objcopy.exe")
+set(CMAKE_SIZE         "${TOOLCHAIN_PATH}arm-none-eabi-size.exe")
+# ============================================
 
 set(CMAKE_EXECUTABLE_SUFFIX_ASM     ".elf")
 set(CMAKE_EXECUTABLE_SUFFIX_C       ".elf")

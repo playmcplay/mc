@@ -1,0 +1,167 @@
+[
+{
+  "directory": "/home/gabriel/workspace/mc/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Core/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Include -Og -g3 -Wall -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -o CMakeFiles/SnakeGame.dir/Core/Src/main.c.obj -c /home/gabriel/workspace/mc/Core/Src/main.c",
+  "file": "/home/gabriel/workspace/mc/Core/Src/main.c"
+},
+{
+  "directory": "/home/gabriel/workspace/mc/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Core/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Include -Og -g3 -Wall -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -o CMakeFiles/SnakeGame.dir/Core/Src/gpio.c.obj -c /home/gabriel/workspace/mc/Core/Src/gpio.c",
+  "file": "/home/gabriel/workspace/mc/Core/Src/gpio.c"
+},
+{
+  "directory": "/home/gabriel/workspace/mc/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Core/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Include -Og -g3 -Wall -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -o CMakeFiles/SnakeGame.dir/Core/Src/fsmc.c.obj -c /home/gabriel/workspace/mc/Core/Src/fsmc.c",
+  "file": "/home/gabriel/workspace/mc/Core/Src/fsmc.c"
+},
+{
+  "directory": "/home/gabriel/workspace/mc/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Core/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Include -Og -g3 -Wall -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -o CMakeFiles/SnakeGame.dir/Core/Src/tim.c.obj -c /home/gabriel/workspace/mc/Core/Src/tim.c",
+  "file": "/home/gabriel/workspace/mc/Core/Src/tim.c"
+},
+{
+  "directory": "/home/gabriel/workspace/mc/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Core/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Include -Og -g3 -Wall -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -o CMakeFiles/SnakeGame.dir/Core/Src/stm32f4xx_it.c.obj -c /home/gabriel/workspace/mc/Core/Src/stm32f4xx_it.c",
+  "file": "/home/gabriel/workspace/mc/Core/Src/stm32f4xx_it.c"
+},
+{
+  "directory": "/home/gabriel/workspace/mc/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Core/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Include -Og -g3 -Wall -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -o CMakeFiles/SnakeGame.dir/Core/Src/stm32f4xx_hal_msp.c.obj -c /home/gabriel/workspace/mc/Core/Src/stm32f4xx_hal_msp.c",
+  "file": "/home/gabriel/workspace/mc/Core/Src/stm32f4xx_hal_msp.c"
+},
+{
+  "directory": "/home/gabriel/workspace/mc/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Core/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Include -Og -g3 -Wall -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -o CMakeFiles/SnakeGame.dir/Core/Src/sysmem.c.obj -c /home/gabriel/workspace/mc/Core/Src/sysmem.c",
+  "file": "/home/gabriel/workspace/mc/Core/Src/sysmem.c"
+},
+{
+  "directory": "/home/gabriel/workspace/mc/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Core/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Include -Og -g3 -Wall -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -o CMakeFiles/SnakeGame.dir/Core/Src/syscalls.c.obj -c /home/gabriel/workspace/mc/Core/Src/syscalls.c",
+  "file": "/home/gabriel/workspace/mc/Core/Src/syscalls.c"
+},
+{
+  "directory": "/home/gabriel/workspace/mc/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Core/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Include -g3 -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -o CMakeFiles/SnakeGame.dir/startup_stm32f407xx.s.obj -c /home/gabriel/workspace/mc/startup_stm32f407xx.s",
+  "file": "/home/gabriel/workspace/mc/startup_stm32f407xx.s"
+},
+{
+  "directory": "/home/gabriel/workspace/mc/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Core/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Include -Og -g3 -Wall -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -o CMakeFiles/SnakeGame.dir/Core/Src/lcd.c.obj -c /home/gabriel/workspace/mc/Core/Src/lcd.c",
+  "file": "/home/gabriel/workspace/mc/Core/Src/lcd.c"
+},
+{
+  "directory": "/home/gabriel/workspace/mc/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Core/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Include -Og -g3 -Wall -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -o CMakeFiles/SnakeGame.dir/Core/Src/delay.c.obj -c /home/gabriel/workspace/mc/Core/Src/delay.c",
+  "file": "/home/gabriel/workspace/mc/Core/Src/delay.c"
+},
+{
+  "directory": "/home/gabriel/workspace/mc/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Core/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Include -Og -g3 -Wall -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -o CMakeFiles/SnakeGame.dir/Core/Src/sys.c.obj -c /home/gabriel/workspace/mc/Core/Src/sys.c",
+  "file": "/home/gabriel/workspace/mc/Core/Src/sys.c"
+},
+{
+  "directory": "/home/gabriel/workspace/mc/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Core/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Include -Og -g3 -Wall -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -o cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj -c /home/gabriel/workspace/mc/Core/Src/system_stm32f4xx.c",
+  "file": "/home/gabriel/workspace/mc/Core/Src/system_stm32f4xx.c"
+},
+{
+  "directory": "/home/gabriel/workspace/mc/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Core/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Include -Og -g3 -Wall -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -o cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fsmc.c.obj -c /home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fsmc.c",
+  "file": "/home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fsmc.c"
+},
+{
+  "directory": "/home/gabriel/workspace/mc/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Core/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Include -Og -g3 -Wall -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -o cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_nor.c.obj -c /home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_nor.c",
+  "file": "/home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_nor.c"
+},
+{
+  "directory": "/home/gabriel/workspace/mc/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Core/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Include -Og -g3 -Wall -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -o cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sram.c.obj -c /home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sram.c",
+  "file": "/home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sram.c"
+},
+{
+  "directory": "/home/gabriel/workspace/mc/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Core/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Include -Og -g3 -Wall -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -o cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_nand.c.obj -c /home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_nand.c",
+  "file": "/home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_nand.c"
+},
+{
+  "directory": "/home/gabriel/workspace/mc/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Core/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Include -Og -g3 -Wall -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -o cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pccard.c.obj -c /home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pccard.c",
+  "file": "/home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pccard.c"
+},
+{
+  "directory": "/home/gabriel/workspace/mc/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Core/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Include -Og -g3 -Wall -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -o cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj -c /home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+  "file": "/home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c"
+},
+{
+  "directory": "/home/gabriel/workspace/mc/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Core/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Include -Og -g3 -Wall -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -o cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj -c /home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+  "file": "/home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c"
+},
+{
+  "directory": "/home/gabriel/workspace/mc/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Core/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Include -Og -g3 -Wall -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -o cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj -c /home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+  "file": "/home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c"
+},
+{
+  "directory": "/home/gabriel/workspace/mc/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Core/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Include -Og -g3 -Wall -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -o cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj -c /home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+  "file": "/home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c"
+},
+{
+  "directory": "/home/gabriel/workspace/mc/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Core/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Include -Og -g3 -Wall -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -o cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj -c /home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+  "file": "/home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c"
+},
+{
+  "directory": "/home/gabriel/workspace/mc/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Core/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Include -Og -g3 -Wall -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -o cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj -c /home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+  "file": "/home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c"
+},
+{
+  "directory": "/home/gabriel/workspace/mc/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Core/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Include -Og -g3 -Wall -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -o cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj -c /home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+  "file": "/home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c"
+},
+{
+  "directory": "/home/gabriel/workspace/mc/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Core/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Include -Og -g3 -Wall -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -o cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj -c /home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+  "file": "/home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c"
+},
+{
+  "directory": "/home/gabriel/workspace/mc/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Core/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Include -Og -g3 -Wall -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -o cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj -c /home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+  "file": "/home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c"
+},
+{
+  "directory": "/home/gabriel/workspace/mc/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Core/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Include -Og -g3 -Wall -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -o cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj -c /home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+  "file": "/home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c"
+},
+{
+  "directory": "/home/gabriel/workspace/mc/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Core/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Include -Og -g3 -Wall -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -o cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj -c /home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+  "file": "/home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c"
+},
+{
+  "directory": "/home/gabriel/workspace/mc/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Core/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Include -Og -g3 -Wall -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -o cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj -c /home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+  "file": "/home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c"
+},
+{
+  "directory": "/home/gabriel/workspace/mc/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Core/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Include -Og -g3 -Wall -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -o cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj -c /home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+  "file": "/home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c"
+},
+{
+  "directory": "/home/gabriel/workspace/mc/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Core/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Include -Og -g3 -Wall -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -o cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj -c /home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+  "file": "/home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c"
+},
+{
+  "directory": "/home/gabriel/workspace/mc/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Core/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gabriel/workspace/mc/cmake/stm32cubemx/../../Drivers/CMSIS/Include -Og -g3 -Wall -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -o cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj -c /home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+  "file": "/home/gabriel/workspace/mc/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c"
+}
+]

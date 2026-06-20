@@ -28,8 +28,8 @@
  ****************************************************************************************************
  */
  
-#include "./SYSTEM/delay/delay.h"
-#include "./BSP/LCD/lcd.h"
+#include "delay.h"
+#include "lcd.h"
 
 
 /**
